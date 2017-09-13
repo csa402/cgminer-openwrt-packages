@@ -26,9 +26,9 @@ PKG_NAME:=cgminer
 #endif
 
 
-ifeq ($(CONFIG_CGMINER_GEKKO),y)
+ifeq ($(CONFIG_CGMINER_BITMAIN),y)
        PKG_VERSION:=git-$(shell git ls-remote https://github.com/csa402/cgminer-ants3.git master | cut -f1 | cut -c1-7)
-       PKG_REV:=693e94a481da364223a9cab4d1773a482835bd64
+       PKG_REV:=master
 endif
 
 #PKG_VERSION:=4.10.0
@@ -64,7 +64,7 @@ define Package/cgminer
 ifeq ($(CONFIG_TARGET_brcm2708_RaspberryPi),)
 	DEPENDS:=+libcurl +libpthread +jansson +udev
 else
-	DEPENDS:=+libcurl +libpthread +jansson +udev +libncurses
+	DEPENDS:=+libcurl +libpthread +jansson +udev +libncurses +libusb-1.0
 endif
 endef
 
