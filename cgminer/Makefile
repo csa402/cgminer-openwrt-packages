@@ -64,7 +64,7 @@ define Package/cgminer
 ifeq ($(CONFIG_TARGET_brcm2708_RaspberryPi),)
 	DEPENDS:=+libcurl +libpthread +jansson +udev
 else
-	DEPENDS:=+libcurl +libpthread +jansson +udev +libncurses +libusb-1.0
+	DEPENDS:=+libcurl +libpthread +jansson +udev +libncurses
 endif
 endef
 
