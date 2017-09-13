@@ -102,7 +102,7 @@ endif
 define Build/Compile
 	$(call Build/Compile/Default)
 	(cd $(PKG_BUILD_DIR) && \
-	 $(TARGET_CC) -Icompat/jansson-2.6/src `pkg-config -Icompat/libusb-1.0/libusb`;)
+	 $(TARGET_CC) -Icompat/jansson-2.6/src -Icompat/libusb-1.0/libusb )
 endef
 
 define Package/cgminer/install
