@@ -47,7 +47,7 @@ ifeq ($(CONFIG_CGMINER_GEKKO),y)
 	PKG_SOURCE_URL:=git://github.com/wareck/cgminer-gekko.git
 endif
 ifeq ($(CONFIG_CGMINER_BITMAIN),y)
-	PKG_SOURCE_URL:=git://github.com/csa402/cgminer-ants3.git
+	PKG_SOURCE_URL:=git://github.com/csa402/cgminer-4.10.0.git
 endif
 
 PKG_SOURCE_PROTO:=git
