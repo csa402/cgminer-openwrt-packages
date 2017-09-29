@@ -23,8 +23,13 @@ ifeq ($(CONFIG_CGMINER_ROCKMINER),y)
         PKG_REV:=f8b12c8f424ef11d65be425db243416e9d0ef1d3
 endif
 
+#ifeq ($(CONFIG_CGMINER_BITMAIN),y)
+#       PKG_VERSION:=git-$(shell git ls-remote https://github.com/csa402/cgminer-ants3.git master | cut -f1 | cut -c1-7)
+#       PKG_REV:=master
+#endif
+
 ifeq ($(CONFIG_CGMINER_BITMAIN),y)
-       PKG_VERSION:=git-$(shell git ls-remote https://github.com/csa402/cgminer-ants3.git master | cut -f1 | cut -c1-7)
+       PKG_VERSION:=git-$(shell git ls-remote https://github.com/csa402/cgminer-4.10.0.git master | cut -f1 | cut -c1-7)
        PKG_REV:=master
 endif
 
