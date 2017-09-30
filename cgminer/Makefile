@@ -15,8 +15,8 @@ ifeq ($(CONFIG_CGMINER_AVALON4),y)
 	PKG_REV:=avalon4
 endif
 ifeq ($(CONFIG_CGMINER_GEKKO),y)
-	PKG_VERSION:=git-$(shell git ls-remote https://github.com/csa402/cgminer-gekko.git master | cut -f1 | cut -c1-7)
-	PKG_REV:=master
+        PKG_VERSION:=git-$(shell git ls-remote https://github.com/csa402/cgminer-gekko.git master | cut -f1 | cut -c1-7)
+        PKG_REV:=master
 endif
 ifeq ($(CONFIG_CGMINER_ROCKMINER),y)
         PKG_VERSION:=git-$(shell git ls-remote https://github.com/wareck/cgminer-gekko.git master | cut -f1 | cut -c1-7)
@@ -95,7 +95,7 @@ ifeq ($(CONFIG_CGMINER_AVALON4),y)
 	CONFIGURE_ARGS += --enable-avalon4
 endif
 ifeq ($(CONFIG_CGMINER_GEKKO),y)
-        CONFIGURE_ARGS += --enable-gekko
+	CONFIGURE_ARGS += --enable-gekko
 endif
 ifeq ($(CONFIG_CGMINER_BITMAIN),y)
 	CONFIGURE_ARGS += --without-curses --enable-ants3
@@ -137,10 +137,10 @@ ifeq ($(CONFIG_CGMINER_AVALON4),y)
 	$(INSTALL_BIN) $(FILES_DIR)/mm-avalon4-upgrade             $(1)/usr/bin/mmupgrade
 endif
 ifeq ($(CONFIG_CGMINER_GEKKO),y)
-        $(INSTALL_BIN) $(FILES_DIR)/cgminer-gekko-monitor        $(1)/usr/bin/cgminer-monitor
-        $(INSTALL_BIN) $(FILES_DIR)/cgminer.gekko.init           $(1)/etc/init.d/cgminer
-        $(CP)          $(FILES_DIR)/cgminer.gekko.config         $(1)/etc/config/cgminer
-        $(INSTALL_BIN) $(FILES_DIR)/mm-gekko-upgrade             $(1)/usr/bin/mmupgrade
+	$(INSTALL_BIN) $(FILES_DIR)/cgminer-gekko-monitor        $(1)/usr/bin/cgminer-monitor
+	$(INSTALL_BIN) $(FILES_DIR)/cgminer.gekko.init           $(1)/etc/init.d/cgminer
+	$(CP)          $(FILES_DIR)/cgminer.gekko.config         $(1)/etc/config/cgminer
+	$(INSTALL_BIN) $(FILES_DIR)/mm-gekko-upgrade             $(1)/usr/bin/mmupgrade
 endif
 ifeq ($(CONFIG_CGMINER_BITMAIN),y)
 	$(INSTALL_BIN) $(FILES_DIR)/cgminer-bitmain-monitor	   $(1)/usr/bin/cgminer-monitor
