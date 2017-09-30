@@ -27,3 +27,4 @@ if [ "$A" == "$B" ]; then
     /etc/init.d/cgminer restart
     exit 0;
 fi
+
