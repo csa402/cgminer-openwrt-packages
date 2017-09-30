@@ -29,7 +29,7 @@ endif
 #endif
 
 ifeq ($(CONFIG_CGMINER_BITMAIN),y)
-       PKG_VERSION:=git-$(shell git ls-remote https://github.com/csa402/cgminer-4.10.0.git master | cut -f1 | cut -c1-7)
+       PKG_VERSION:=git-$(shell git ls-remote https://github.com/csa402/cgminer-ants3.git master | cut -f1 | cut -c1-7)
        PKG_REV:=master
 endif
 
@@ -47,7 +47,7 @@ ifeq ($(CONFIG_CGMINER_GEKKO),y)
 	PKG_SOURCE_URL:=git://github.com/csa402/cgminer-gekko.git
 endif
 ifeq ($(CONFIG_CGMINER_BITMAIN),y)
-	PKG_SOURCE_URL:=git://github.com/csa402/cgminer-4.10.0.git
+	PKG_SOURCE_URL:=git://github.com/csa402/cgminer-ants3.git
 endif
 
 PKG_SOURCE_PROTO:=git
